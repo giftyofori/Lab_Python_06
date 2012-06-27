@@ -56,7 +56,7 @@ new_player.total_score()
 new_player.average_score()
 print 'average score of torres :' ,new_player.average_score()
         
-        
+import datetime       
 class match:
     def __init__(self,home_team,away_team,date=None):
         self.home_team=home_team
@@ -103,6 +103,10 @@ class match:
             else:
                 self.away_scores[player.last_name]+=score
         return team
+finals=match('spain','portugal',datetime.date(2012,06,27))
+finals.add_score(new_player,1)
+finals.add_score(new_player2,1)
+finals.winner()
         
     
         
